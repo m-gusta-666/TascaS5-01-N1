@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="/template/template :: head">
+
+<body>
+	<header th:replace="/template/template :: header"></header>
+	<div class="container text-center">
+		<div class="panel bg-light">
+			<div class="panel-heading">
+				<h3 class="panel-title text-danger">
+					<span th:text="${error}"></span> - <span th:text="${status}"></span>
+				</h3>
+			</div>
+			<div class=panel-body>
+				<img th:src="@{/images/sad-cat.jfif}" alt="Sad cat" width="50%" height="50%">
+				<br>
+				<h4>S'ha realitzat una sol·licitud incorrecta.</h4>
+				<br>
+				<button class="btn btn-success" onclick="history.back()">Tornar enrere</button>
+			</div>
+		</div>
+
+	</div>
+	<footer th:replace="/template/template :: footer">
+	 
+	 
+	
+	</footer>
+</body>
+
+</html>
